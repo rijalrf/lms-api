@@ -2,11 +2,8 @@ services:
   lms-app:
     build: .
     container_name: lms-app
-    environment:
-      - DATABASE_URL=mysql://admin:root@lms-db:3306/lms_trainer
-      - JWT_SECRET=adadw3e12qDFESFAedewr320ekdsa
-      - JWT_EXPIRES_IN=24h
-      - BCRYPT_SALT_ROUNDS=10
+    env_file:
+      - .env
     depends_on:
       lms-db:
         condition: service_healthy
@@ -22,11 +19,8 @@ services:
   lms-db:
     image: mysql:8.0
     container_name: lms-db
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=lms_trainer
-      - MYSQL_USER=admin
-      - MYSQL_PASSWORD=root
+    env_file:
+      - .env
     ports:
       - '3306:3306'
     healthcheck:
