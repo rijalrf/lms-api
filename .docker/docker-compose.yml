@@ -1,6 +1,8 @@
 services:
   lms-app:
-    build: .
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
     container_name: lms-app
     env_file:
       - .env
