@@ -1,6 +1,8 @@
 services:
   lms-app:
-    build: .
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
     container_name: lms-app
     env_file:
       - .env
@@ -13,8 +15,7 @@ services:
     command: sh -c "npx prisma migrate deploy && npm run build && npm run start:dev"
     restart: always
     networks:
-      - nginx-proxy
-      - default
+      - lms-network
 
   lms-db:
     image: mysql:8.0
@@ -28,13 +29,13 @@ services:
       interval: 5s
       retries: 5
     volumes:
-      - db_data:/var/lib/mysql
+      - lms_db_data:/var/lib/mysql
     networks:
-      - default
+      - lms-network
 
 networks:
-  nginx-proxy:
+  lms-network:
     external: true
 
 volumes:
-  db_data:
+  lms_db_data:
