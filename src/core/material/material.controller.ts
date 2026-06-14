@@ -9,15 +9,15 @@ import {
   Query,
 } from '@nestjs/common';
 import { MaterialService } from './material.service';
-import { ZBody } from 'src/common/decorator/zod.decorator';
+import { ZBody } from '../../common/decorator/zod.decorator';
 import {
   MaterialRequestDTO,
   MaterialResponseDTO,
   MaterialsPopularResponseDTO,
 } from './material.dto';
-import { AuthUser } from 'src/auth/auth.decorator';
-import { UserResponseDTO } from 'src/user/user.dto';
-import { Message } from 'src/common/decorator/message.decorator';
+import { AuthUser } from '../../auth/auth.decorator';
+import { UserResponseDTO } from '../../user/user.dto';
+import { Message } from '../../common/decorator/message.decorator';
 import { MaterialValidation } from './material.validation';
 
 @Controller('materials')

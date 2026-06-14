@@ -1,4 +1,4 @@
-import { UserResponseDTO } from 'src/user/user.dto';
+import { UserResponseDTO } from '../user/user.dto';
 
 export class LoginRequestDTO {
   email!: string;

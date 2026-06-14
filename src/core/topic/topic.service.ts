@@ -6,7 +6,7 @@ import {
   TopicResponseDTOwithPagination,
   TopicPopularResponseDTO,
 } from './topic.dto';
-import { Pagination } from 'src/common/dto/pagination.dto';
+import { Pagination } from '../../common/dto/pagination.dto';
 
 @Injectable()
 export class TopicService {

@@ -6,8 +6,8 @@ import {
   UserAuthDTO,
 } from './user.dto';
 import { UserRepository } from './user.repo';
-import { Pagination } from 'src/common/dto/pagination.dto';
-import { HashService } from 'src/helper/hash/hash.service';
+import { Pagination } from '../common/dto/pagination.dto';
+import { HashService } from '../helper/hash/hash.service';
 
 @Injectable()
 export class UserService {

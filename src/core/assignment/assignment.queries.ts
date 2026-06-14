@@ -1,4 +1,4 @@
-import { Prisma } from '../../prisma/generated-client/client.js';
+import { Prisma } from '../../prisma/generated-client/client';
 
 export const TOP_TRAINERS_SQL = Prisma.sql`
     SELECT u.id , u.name, u.email, COUNT(a.id) as countAssignment

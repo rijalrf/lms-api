@@ -16,11 +16,11 @@ import {
   TopicResponseDTO,
   TopicResponseDTOwithPagination,
 } from './topic.dto';
-import { ZBody } from 'src/common/decorator/zod.decorator';
+import { ZBody } from '../../common/decorator/zod.decorator';
 import { TopicValidation } from './topic.validation';
-import { AuthUser } from 'src/auth/auth.decorator';
-import { UserResponseDTO } from 'src/user/user.dto';
-import { Message } from 'src/common/decorator/message.decorator';
+import { AuthUser } from '../../auth/auth.decorator';
+import { UserResponseDTO } from '../../user/user.dto';
+import { Message } from '../../common/decorator/message.decorator';
 
 @Controller('topics')
 @Injectable()

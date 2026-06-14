@@ -1,4 +1,4 @@
-import { Pagination } from 'src/common/dto/pagination.dto';
+import { Pagination } from '../../common/dto/pagination.dto';
 import {
   AssignmentFullEntity,
   AssignmentStatusEnum,

@@ -15,10 +15,10 @@ import {
   UserResponseDTO,
   UserResponseDTOwithPagination,
 } from './user.dto';
-import { Message } from 'src/common/decorator/message.decorator';
+import { Message } from '../common/decorator/message.decorator';
 import { UserValidation } from './user.validation';
-import { ErrorResponseFilter } from 'src/common/error-response.filter';
-import { ZBody } from 'src/common/decorator/zod.decorator';
+import { ErrorResponseFilter } from '../common/error-response.filter';
+import { ZBody } from '../common/decorator/zod.decorator';
 
 @UseFilters(ErrorResponseFilter)
 @Controller('users')

@@ -1,11 +1,11 @@
 import { Controller, Post, Get, Res, Delete, Req, } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { UserRequestDTO, UserResponseDTO } from 'src/user/user.dto';
+import { UserRequestDTO, UserResponseDTO } from '../user/user.dto';
 import { LoginRequestDTO, LoginResponseDTO } from './auth.dto';
 import { AuthUser } from './auth.decorator';
-import { Message } from 'src/common/decorator/message.decorator';
+import { Message } from '../common/decorator/message.decorator';
 import type { Response } from 'express';
-import { ZBody } from 'src/common/decorator/zod.decorator';
+import { ZBody } from '../common/decorator/zod.decorator';
 import { AuthValidation } from './auth.validation';
 
 @Controller('auth')

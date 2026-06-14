@@ -1,9 +1,9 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { HashService } from 'src/helper/hash/hash.service';
-import { UserService } from 'src/user/user.service';
+import { HashService } from '../helper/hash/hash.service';
+import { UserService } from '../user/user.service';
 import { LoginRequestDTO, LoginResponseDTO } from './auth.dto';
 import { v4 as uuid } from 'uuid';
-import { UserRequestDTO, UserResponseDTO } from 'src/user/user.dto';
+import { UserRequestDTO, UserResponseDTO } from '../user/user.dto';
 
 @Injectable()
 export class AuthService {

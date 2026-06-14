@@ -6,7 +6,7 @@ import {
   Logger,
   UnauthorizedException,
 } from '@nestjs/common';
-import { Prisma } from '../prisma/generated-client/client.js';
+import { Prisma } from '../prisma/generated-client/client';
 import { ZodError } from 'zod';
 
 @Catch(

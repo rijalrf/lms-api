@@ -7,7 +7,7 @@ import {
   AssignmentResponseTopTrainerDTO,
   AssignmentResponseWithPaginationDTO,
 } from './assignment.dto';
-import { Pagination } from 'src/common/dto/pagination.dto';
+import { Pagination } from '../../common/dto/pagination.dto';
 import { AssignmentStatusEnum, TrainerPopularEntity } from './assignment.entity';
 
 @Injectable()

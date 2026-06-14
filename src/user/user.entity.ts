@@ -1,4 +1,4 @@
-import { Role } from '../prisma/generated-client/client.js';
+import { Role } from '../prisma/generated-client/client';
 
 export type UserRoleEnum = Role;
 export type UserEntity = {
