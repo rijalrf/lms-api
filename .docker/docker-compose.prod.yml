@@ -1,6 +1,6 @@
 services:
   lms-api:
-    image: lms-api:prod
+    image: lms-api:latest
     container_name: lms-api
     ports:
       - ${PORT}:3000
