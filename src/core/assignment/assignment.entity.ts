@@ -1,4 +1,4 @@
-import { StatusAssignment, Prisma } from '@prisma/client';
+import { StatusAssignment, Prisma } from '../../prisma/generated-client/client.js';
 import { MaterialEntity } from '../material/material.entity';
 import { TopicEntity } from '../topic/topic.entity';
 

@@ -1,12 +1,9 @@
 services:
   lms-api:
-    build:
-      context: ..
-      dockerfile: .docker/Dockerfile
-      target: dev
+    image: lms-api:prod
     container_name: lms-api
     ports:
-      - '${PORT}:3000'
+      - ${PORT}:3000
     environment:
       - DATABASE_URL=${DATABASE_URL}
       - JWT_SECRET=${JWT_SECRET}
@@ -16,13 +13,11 @@ services:
       - BCRYPT_SALT_ROUNDS=${BCRYPT_SALT_ROUNDS}
     extra_hosts:
       - 'host.docker.internal:host-gateway'
-    volumes:
-      - ../:/app
-      - /app/node_modules
-    command: sh -c "npx prisma migrate deploy && npm run start:dev"
-    restart: always
+    restart: unless-stopped
     networks:
       - lms-network
+    # Tetap jalankan migrasi sebelum start
+    command: sh -c "npx prisma migrate deploy && node dist/main"
 
 networks:
   lms-network:

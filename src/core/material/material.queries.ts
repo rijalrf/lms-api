@@ -1,4 +1,4 @@
-import { Prisma } from '@prisma/client';
+import { Prisma } from '../../prisma/generated-client/client.js';
 
 export const MATERIAL_POPULARS_SQL = Prisma.sql`
       SELECT m.title, m.description, COUNT(a.id) as countAssignment

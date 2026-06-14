@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { Material } from '@prisma/client';
+import { Material } from '../../prisma/generated-client/client.js';
 import { MaterialEntity, materialSelects } from './material.entity';
 import {
   MATERIAL_POPULARS_SQL,
