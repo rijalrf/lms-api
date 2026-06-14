@@ -9,17 +9,13 @@ async function bootstrap() {
   app.getHttpAdapter().get('/api/v1/test', (_req, res) => {
     res.status(200).json({
       status: 'success',
-      message: 'API is working correctly anjayy',
+      message: 'API is working correctly',
     });
   });
 
   app.use(cookieParser());
   app.enableCors({
-    origin: [
-      'http://localhost:3000',
-      'http://localhost:4000',
-      'http://localhost:3100',
-    ],
+    origin: process.env.ALLOWED_ORIGINS?.split(',') || [],
     credentials: true,
   });
 
